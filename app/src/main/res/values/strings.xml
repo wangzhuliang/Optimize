@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Optimize</string>
+    <string name="request_api_failed">请求数据失败</string>
+    <string name="network_connect_error">请检查网络是否连接</string>
+    <string name="exit_program">双击退出程序</string>
+    <string name="tab_hot">Hot</string>
+    <string name="tab_info">Home</string>
+    <string name="tab_mine">Mine</string>
+    <string name="home_detail">热门详情</string>
 </resources>
