@@ -10,7 +10,6 @@ import com.blankj.utilcode.util.BarUtils;
 import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
-import wang.cn.com.optimize.Adapter.HomeAdapter;
 import wang.cn.com.optimize.R;
 import wang.cn.com.optimize.base.BaseDaggerActivity;
 import wang.cn.com.optimize.bean.HomeBean;
@@ -38,7 +37,7 @@ public class HomeDetailActivity extends BaseDaggerActivity<HomeDetailPresenter> 
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home_detail;
+        return R.layout.activity_home_detail;
     }
 
     @Override

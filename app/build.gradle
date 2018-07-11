@@ -50,6 +50,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     //glide
     implementation 'com.github.bumptech.glide:glide:4.5.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
     //AndroidUtilCode是一个强大易用的安卓工具类库
     implementation 'com.blankj:utilcode:1.13.9'
     //Android开发调试神器
