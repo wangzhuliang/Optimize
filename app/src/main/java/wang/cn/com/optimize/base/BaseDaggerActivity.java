@@ -19,7 +19,9 @@ import wang.cn.com.optimize.R;
 /**
  * @author wong
  */
-public abstract class BaseDaggerActivity<T extends BaseContract.BasePresenter> extends RxAppCompatActivity implements BaseContract.BaseView {
+public abstract class BaseDaggerActivity<T extends BaseContract.BasePresenter>
+        extends RxAppCompatActivity implements BaseContract.BaseView {
+
     @Inject
     @Nullable
     protected T mPresenter;

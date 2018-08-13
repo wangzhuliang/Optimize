@@ -9,9 +9,12 @@ public class HomeContract {
 
     interface View extends BaseContract.BaseView {
         void updateHomeData(String order, HomeBean homeBean);
+        void updateHeaderData(String order, HomeBean homeBean);
     }
 
     interface Presenter extends BaseContract.BasePresenter<View> {
         void getHomeNews(String order);
+        void getHeaderNews(String order);
     }
+
 }

@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <!--@style/Theme.AppCompat.Light.NoActionBar-->
         <!--不想应用在多窗口模式下运行,android:resizeableActivity="false"-->
         <!--android8.0及以上,手动进行设置最大屏幕宽高比
         android:maxAspectRatio="2.4"-->
@@ -36,14 +37,35 @@
 
         <activity android:name=".MainActivity"
             android:label="@string/app_name"
-            android:icon="@mipmap/ic_launcher">
+            android:icon="@mipmap/ic_launcher"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <activity android:name=".ui.home.homedetail.HomeDetailActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".ui.hot.HotMagnify.HotMagnifyActivity"
+        <activity android:name=".ui.home.effect.echelon.EchelonActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hot.childpager.second.magnify.MagnifyActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.effect.viewpager.ViewPagerLayoutManagerActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.effect.tantan.TanTanActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.home.effect.gallery.GalleryActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hot.childpager.first.moveimage.MoveImageActivity"
+            android:theme="@style/translucent"
+            android:windowContentTransitions="true"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.find.circlefriends.CircleFriendsActivity"
             android:screenOrientation="portrait"/>
 
         <!--android7.1及以下版本:-->

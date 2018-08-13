@@ -23,8 +23,31 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
     }
 
     @Override
-    public void getHomeNews(final String order) {
+    public void getHeaderNews(final String order) {
+        //mView.showLoading();
+        App.apiService(WangApiService.class)
+                .apiHomeHeader(order)
+                .compose(RxSchedulers.<HomeBean>io_main())
+                .compose(mView.<HomeBean>bindToLife())
+                .subscribe(new Consumer<HomeBean>() {
+                    @Override
+                    public void accept(HomeBean homeBean) throws Exception {
+                        //mView.hideLoading();
+                        if (homeBean != null) {
+                            mView.updateHeaderData(order,homeBean);
+                        }
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        mView.showFailed();
+                    }
+                });
+    }
 
+    @Override
+    public void getHomeNews(final String order) {
+        mView.showLoading();
         App.apiService(WangApiService.class)
                 .apiHome(order)
                 .compose(RxSchedulers.<HomeBean>io_main())
@@ -32,6 +55,7 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
                 .subscribe(new Consumer<HomeBean>() {
                     @Override
                     public void accept(HomeBean homeBean) throws Exception {
+                        mView.hideLoading();
                         if (homeBean != null) {
                             mView.updateHomeData(order,homeBean);
                         }
@@ -49,24 +73,17 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
                 .subscribe(new Observer<HomeBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
                     }
-
                     @Override
                     public void onNext(HomeBean homeBean) {
                         if (homeBean != null) {
-
                         }
                     }
-
                     @Override
                     public void onError(Throwable e) {
-
                     }
-
                     @Override
                     public void onComplete() {
-
                     }
                 });*/
     }

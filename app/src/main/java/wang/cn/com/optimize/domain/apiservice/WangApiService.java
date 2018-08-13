@@ -20,6 +20,14 @@ public interface WangApiService {
     @GET("posts/" + "?" +
             "client_id=ghost-frontend" + "&" +
             "client_secret=122ca884710f"+"&"+"filter=tags:ying-yang-wen-zhang"+"&"+
+            "limit=4" + "&" )
+    Observable<HomeBean> apiHomeHeader(
+            @Query("page") String page
+    );
+
+    @GET("posts/" + "?" +
+            "client_id=ghost-frontend" + "&" +
+            "client_secret=122ca884710f"+"&"+"filter=tags:ying-yang-wen-zhang"+"&"+
             "limit=40" + "&" +
             "page=1")
     Observable<HomeBean> apiHomeDetail();

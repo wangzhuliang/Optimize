@@ -15,6 +15,9 @@ import android.widget.TextView;
 
 import wang.cn.com.optimize.R;
 
+/**
+ * @author wangZL
+ */
 public class TitleBarLayout extends LinearLayout {
     RelativeLayout rlActionbar;
     ImageView ivLeft;

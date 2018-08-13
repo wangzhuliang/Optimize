@@ -10,7 +10,8 @@ import wang.cn.com.optimize.domain.RxSchedulers;
 import wang.cn.com.optimize.domain.apiservice.WangApiService;
 import wang.cn.com.optimize.ui.home.HomeContract;
 
-public class HomeDetailPresenter extends BasePresenter<HomeDetailContract.View> implements HomeDetailContract.Presenter{
+public class HomeDetailPresenter extends BasePresenter<HomeDetailContract.View>
+        implements HomeDetailContract.Presenter{
 
     @Inject
     public HomeDetailPresenter() {

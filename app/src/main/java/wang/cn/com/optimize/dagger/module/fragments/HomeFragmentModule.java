@@ -1,13 +1,9 @@
 package wang.cn.com.optimize.dagger.module.fragments;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import dagger.Module;
 import dagger.Provides;
-import wang.cn.com.optimize.Adapter.HomeAdapter;
-import wang.cn.com.optimize.bean.HomeBean;
+import wang.cn.com.optimize.adapter.HomeAdapter;
 import wang.cn.com.optimize.dagger.scope.PerFragment;
 import wang.cn.com.optimize.ui.home.HomeFragment;
 

@@ -15,6 +15,9 @@ import wang.cn.com.optimize.base.BaseDaggerActivity;
 import wang.cn.com.optimize.bean.HomeBean;
 import wang.cn.com.optimize.ui.widget.TitleBarLayout;
 
+/**
+ * @author wangZL
+ */
 public class HomeDetailActivity extends BaseDaggerActivity<HomeDetailPresenter> implements HomeDetailContract.View {
 
     @BindView(R.id.title_bar)

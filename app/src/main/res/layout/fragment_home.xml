@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ajguan.library.EasyRefreshLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/topic_refresh_layout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/topic_recycler_view"
+    <FrameLayout
+        android:id="@+id/fl_content_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</com.ajguan.library.EasyRefreshLayout>
+        android:layout_height="match_parent">
+
+        <com.ajguan.library.EasyRefreshLayout
+            android:id="@+id/topic_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/topic_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.ajguan.library.EasyRefreshLayout>
+
+    </FrameLayout>
+
+    <include
+        layout="@layout/view_error"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/view_empty"
+        android:visibility="gone" />
+
+
+</LinearLayout>

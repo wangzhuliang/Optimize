@@ -16,12 +16,16 @@ import com.blankj.utilcode.util.ToastUtils;
 import java.util.ArrayList;
 import butterknife.BindView;
 import wang.cn.com.optimize.base.BaseActivity;
+import wang.cn.com.optimize.ui.find.FindFragment;
 import wang.cn.com.optimize.ui.home.HomeFragment;
 import wang.cn.com.optimize.ui.hot.HotFragment;
 import wang.cn.com.optimize.ui.mine.MineFragment;
 import wang.cn.com.optimize.ui.widget.TitleBarLayout;
 
-public class MainActivity extends BaseActivity implements BottomNavigationBar.OnTabSelectedListener{
+/**
+ * @author wangZL
+ */
+public class  MainActivity extends BaseActivity implements BottomNavigationBar.OnTabSelectedListener{
 
     @BindView(R.id.title_bar)
     TitleBarLayout titleBar;
@@ -31,6 +35,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     private HomeFragment mHomeFragment;
     private HotFragment mHotFragment;
     private MineFragment mMineFragment;
+    private FindFragment mFindFragment;
     private long exitTime = 0;
     private ArrayList<String> mTitleStrs = new ArrayList<>();
     private ArrayList<Fragment> mFragments = new ArrayList<>();
@@ -79,6 +84,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 //.setInActiveColorResource(R.color.deep_gray)
                 //.addItem(new BottomNavigationItem(R.mipmap.iv_assess_fridge,"Books").setActiveColorResource(R.color.pink))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_news_hot_white,"Hot").setActiveColorResource(R.color.new_blue))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_find_white,"Find").setActiveColorResource(R.color.new_blue))
                 //.setBadgeItem(numberBadgeItem))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_mine_white,"Mine").setActiveColorResource(R.color.new_blue))
                 //.setBadgeItem(shapeBadgeItem))
@@ -105,11 +111,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         mHomeFragment = new HomeFragment();
         mHotFragment = new HotFragment();
         mMineFragment = new MineFragment();
+        mFindFragment = new FindFragment();
         mFragments.add(mHomeFragment);
         mFragments.add(mHotFragment);
+        mFragments.add(mFindFragment);
         mFragments.add(mMineFragment);
         mTitleStrs.add(getString(R.string.tab_info));
         mTitleStrs.add(getString(R.string.tab_hot));
+        mTitleStrs.add(getString(R.string.tab_find));
         mTitleStrs.add(getString(R.string.tab_mine));
     }
 

@@ -9,3 +9,4 @@ import wang.cn.com.optimize.dagger.scope.PerActivity;
 public class HomeDetailActivityModule {
 
 }
+
