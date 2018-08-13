@@ -11,6 +11,7 @@ import wang.cn.com.optimize.base.BaseFragment;
 
 /**
  * @author wangZL
+ * haha
  */
 public class HotFragment extends BaseFragment {
 
