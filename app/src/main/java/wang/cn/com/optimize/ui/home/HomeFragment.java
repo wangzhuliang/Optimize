@@ -1,6 +1,7 @@
 package wang.cn.com.optimize.ui.home;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Build;
@@ -13,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.ajguan.library.EasyRefreshLayout;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.ScreenUtils;
@@ -183,6 +186,7 @@ public class HomeFragment extends BaseDaggerFragment<HomePresenter>
         TextView effectTwo = middleOne.findViewById(R.id.tv_effect_two);
         TextView effectThree = middleOne.findViewById(R.id.tv_effect_three);
         TextView effectFour = middleOne.findViewById(R.id.tv_effect_four);
+        TextView tv_to_run = middleOne.findViewById(R.id.tv_to_run);
         effectOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -205,6 +209,33 @@ public class HomeFragment extends BaseDaggerFragment<HomePresenter>
             @Override
             public void onClick(View v) {
                ActivityUtils.startActivity(GalleryActivity.class);
+            }
+        });
+
+        tv_to_run.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 一、先来几行代码，一个app启动另一个app
+                 *
+                 * 通过包名获取要跳转的app，创建intent对象
+                 *
+                 * 这里如果intent为空，就说名没有安装要跳转的应用嘛
+                 *
+                 * 这里跟Activity传递参数一样的嘛，不要担心怎么传递参数，
+                 * 还有接收参数也是跟Activity和Activity传参数一样
+                 *
+                 * 没有安装要跳转的app应用，提醒一下
+                 */
+
+                Intent intent = getActivity().getPackageManager().
+                        getLaunchIntentForPackage("com.ss.android.ugc.aweme");
+                if (intent != null) {
+                    intent.putExtra("name", "我来了");
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getActivity(), "哟，赶紧下载安装这个APP吧", Toast.LENGTH_LONG).show();
+                }
             }
         });
         mHomeAdapter.setMiddleOneView(middleOne);

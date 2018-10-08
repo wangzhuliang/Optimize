@@ -13,6 +13,7 @@
     <string name="middle_one_two">效果二</string>
     <string name="middle_one_three">效果三</string>
     <string name="middle_one_four">效果四</string>
+    <string name="middle_to_run">点我离开这里</string>
     <string name="trill">1.6w</string>
     <string name="tantan_left">siwpe left</string>
     <string name="tantan_right">siwpe right</string>
@@ -21,6 +22,14 @@
     <string name="view_empty">暂无数据，点击重试</string>
     <string name="view_error">数据加载错误</string>
     <string name="circle_friends">朋友圈</string>
+    <string name="calendar">日历</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="single">Single</string>
+    <string name="multiple">Multiple</string>
+    <string name="range">Range</string>
+    <string name="none">None</string>
+    <string name="to_dingding">去钉钉日历</string>
 
     <integer-array name="test_arr">
         <item>@drawable/beauty1</item>

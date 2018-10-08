@@ -68,6 +68,12 @@
         <activity android:name=".ui.find.circlefriends.CircleFriendsActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.find.calendar.CalendarActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.find.calendar.dingding.CalendarDingDingActivity"
+            android:screenOrientation="portrait"/>
+
         <!--android7.1及以下版本:-->
         <meta-data android:name="android.max_aspect" android:value="2.4" />
 
