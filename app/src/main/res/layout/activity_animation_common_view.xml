@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/view_demo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
+        android:padding="20dp"
+        android:src="@drawable/ic_taiji"
+        android:translationZ="5dp"/>
+
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_alpha"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/alpha_animation"
+        android:background="@color/white"/>
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_rotate"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/rotate_animation"
+        android:background="@color/white"/>
+
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_scale"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/scale_animation"
+        android:background="@color/white"/>
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_translate"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/translate_animation"
+        android:background="@color/white"/>
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_animation_set"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/animation_set"
+        android:background="@color/white"/>
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/tv_animation_xml"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/animation_xml"
+        android:background="@color/white"/>
+
+</LinearLayout>

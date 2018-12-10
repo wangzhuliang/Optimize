@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_shop_content_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/view_shop_content_layout_header">
+
+        <LinearLayout
+            android:id="@+id/layout_shop_postcard_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0">
+
+            <View
+                android:id="@+id/view_shop_postcard_tip_left"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/home_divider"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_shop_postcard_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/announcement"
+                android:textColor="@color/home_black_4"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view_shop_postcard_tip_right"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/home_divider" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kfc"
+            android:textColor="@color/home_black"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/re_brand"
+            android:drawablePadding="5dp"
+            android:layout_gravity="center_horizontal" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_shop_postcard_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_name"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:id="@+id/layout_shop_discount_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0">
+
+            <View
+                android:id="@+id/view_shop_discount_tip_left"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/home_divider" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_shop_discount_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/discounts"
+                android:textColor="@color/home_black_4"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view_shop_discount_tip_right"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/home_divider" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_shop_postcard_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/introduce"
+            android:textColor="@color/home_gray_8"
+            android:textSize="12sp"/>
+
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_shop_discount_content"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/cornsilk"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout_shop_postcard_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_shop_postcard_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_shop_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textColor="@color/red_light"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_shop_discount_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_threshold"
+                android:textColor="@color/saddlebrown"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/tv_shop_discount_price"
+                app:layout_constraintTop_toTopOf="@id/tv_shop_discount_price" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_shop_discount_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/super_members"
+                android:textColor="@color/saddlebrown"
+                android:textSize="8sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_discount_price"
+                tools:visibility="visible" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_shop_discount_content_divider"
+            android:layout_width="0.3dp"
+            android:layout_height="0dp"
+            android:background="@color/home_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_shop_discount_action"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_shop_discount_action"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/receive"
+            android:textColor="@color/saddlebrown"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_table_shop_discount_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/layout_shop_discount_content"
+        android:layout_alignParentRight="true">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_table_shop_discount_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preferential"
+            android:singleLine="true"
+            android:textColor="@color/home_gray_8"
+            android:textSize="10sp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_table_shop_discount_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/cart_icon_down_arrow"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/table_shop_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:shrinkColumns="1"
+        android:layout_below="@+id/layout_shop_discount_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/layout_table_shop_discount_count">
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_green"
+                android:text="@string/first_order"
+                android:textColor="@color/green_alpha80" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/first_text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_red"
+                android:text="@string/promotion"
+                android:textColor="@color/red_deep"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/second_text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_orange"
+                android:text="@string/member"
+                android:textColor="@color/home_orange"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/third_text"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_blue"
+                android:text="@string/full_reduction"
+                android:textColor="@color/home_blue"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/forth_text"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_pink"
+                android:text="@string/gift_consumption"
+                android:textColor="@color/pink" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/fifth_text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountTag"
+                android:background="@drawable/bg_border_full_yellow"
+                android:text="@string/insurance"
+                android:textColor="@color/home_yellow" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/tableShopDiscountContent"
+                android:text="@string/sixth_text" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/ivHeadsupArrow"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:padding="10dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/headsup_up_arrow"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_shop_info_header_backgroud"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:background="@mipmap/shop_logo_title" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:minHeight="66dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <View
+                    android:id="@+id/view_shop_info_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp" />
+
+                <wang.cn.com.optimize.ui.widget.wangcoordinatyorwidget.nested.ShopInfoDetailLayout
+                    android:id="@+id/shop_info_header_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_white"/>
+
+            </LinearLayout>
+
+            <wang.cn.com.optimize.ui.widget.wangcoordinatyorwidget.indicator.FixedIndicatorView
+                android:id="@+id/sliding_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_white_bottom_line"/>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</FrameLayout>

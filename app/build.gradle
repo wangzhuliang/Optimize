@@ -22,7 +22,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation('com.android.support:appcompat-v7:27.1.1') {
         exclude module: 'support-v4'
     }
@@ -30,7 +30,7 @@ dependencies {
         force = true
     }
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'org.greenrobot:eventbus:3.1.1'
     //注入
@@ -40,17 +40,17 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
     //rxjava2
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.1'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
     implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
     //retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
     //AndroidUtilCode是一个强大易用的安卓工具类库
@@ -65,8 +65,8 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.11'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
     //ok
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     //下拉刷新
     implementation 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
     //webview库
@@ -86,9 +86,11 @@ dependencies {
     //仿探探滑动
     /*implementation ('lin.jerrylin0322.reswipecard:reswipecard:1.0.0') {
         exclude module:'recyclerview-v7' }*/
-    implementation 'me.yokeyword:fragmentation:1.3.4'
+    implementation 'me.yokeyword:fragmentation:1.3.5'
     //Android下拉刷新PtrFrameLayout的使用
     implementation 'in.srain.cube:ultra-ptr:1.0.11'
     //日历
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
+    //状态切换器
+    implementation 'cn.yc:YCStateLib:1.1.5'
 }

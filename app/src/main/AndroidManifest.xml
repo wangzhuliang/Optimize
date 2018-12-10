@@ -74,6 +74,13 @@
         <activity android:name=".ui.find.calendar.dingding.CalendarDingDingActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.find.animation.view_animation.CommonViewAnimationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.find.animation.AnimationActivity" />
+        <activity android:name=".ui.find.animation.drawable_animation.DrawableAnimationActivity" />
+        <activity android:name=".ui.find.animation.property_animation.PropertyAnimationActivity" />
+        <activity android:name=".ui.find.coordinatortablayout.WangCoordinatorTabLayoutActivity" />
+
         <!--android7.1及以下版本:-->
         <meta-data android:name="android.max_aspect" android:value="2.4" />
 

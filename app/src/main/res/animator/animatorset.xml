@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="backgroundColor"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="?attr/colorAccent"
+        android:valueTo="?attr/colorPrimary"/>
+
+    <!--
+    android:propertyName：String 类型，必须要设置的节点属性，
+    代表要执行动画的属性（通过名字引用），辟如你可以指定了一个View的”alpha”
+    或者 “backgroundColor”
+
+    android:repeatCount：一个动画的重复次数，int 型，”-1“表示无限循环，
+    ”1“表示动画在第一次执行完成后重复执行一次，也就是两次，默认为0，不重复执行。
+
+    android:repeatMode：重复模式：int 型，当一个动画执行完的时候应该如何处理。该值必须是正数或者是-1，
+    “reverse”会使得按照动画向相反的方向执行，可实现类似钟摆效果。
+    “repeat”会使得动画每次都从头开始循环。
+
+    android:startOffset：动画延迟的时间，从调用 start 方法后开始计算，int 型，毫秒为单位。
+
+    android:valueTo：float、int 或者 color 类型，必须要设置的节点属性，表明动画结束的点；
+    如果是颜色的话，由 6 位十六进制的数字表示。
+
+    android:valueFrom：相对应 valueTo，动画的起始点，如果没有指定，系统会通过属性的 get 方法获取，
+    颜色也是 6 位十六进制的数字表示。
+
+    android:valueType：关键参数，如果该 value 是一个颜色，那么就不需要指定，
+    因为动画框架会自动的处理颜色值。
+    有 intType 和 floatType（默认）两种：分别说明动画值为 int 和 float 型。
+
+    -->
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="rotationX"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:valueType="floatType"/>
+
+    <animator
+        android:duration="3000"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="1.0f"
+        android:valueTo="3.0f"
+        android:valueType="floatType"/>
+
+</set>

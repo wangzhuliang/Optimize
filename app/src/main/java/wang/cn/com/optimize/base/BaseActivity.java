@@ -2,9 +2,12 @@ package wang.cn.com.optimize.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.LinearLayout;
+
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.kaopiz.kprogresshud.KProgressHUD;
+import com.ns.yc.ycstatelib.StateLayoutManager;
 import com.trello.rxlifecycle2.LifecycleTransformer;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 import butterknife.ButterKnife;
@@ -19,17 +22,28 @@ public abstract class BaseActivity extends RxAppCompatActivity implements BaseCo
     KProgressHUD mKProgressHUD;
     private Unbinder unbinder;
 
+    protected StateLayoutManager statusLayoutManager;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int layoutId = getLayoutId();
-        setContentView(layoutId);
+        setContentView(R.layout.activity_wang_base_view);
+        initStatusLayout();
+        initBaseView();
+        //int layoutId = getLayoutId();
+        //setContentView(layoutId);
         unbinder = ButterKnife.bind(this);
         initView();
         initData();
     }
 
-    protected abstract int getLayoutId();
+    protected abstract void initStatusLayout();
+
+    private void initBaseView() {
+        LinearLayout ll_main = (LinearLayout) findViewById(R.id.ll_main);
+        ll_main.addView(statusLayoutManager.getRootLayout());
+    }
+    //protected abstract int getLayoutId();
 
     protected abstract void initView();
 
@@ -68,17 +82,19 @@ public abstract class BaseActivity extends RxAppCompatActivity implements BaseCo
 
     @Override
     public void showSuccess() {
-
+        statusLayoutManager.showContent();
     }
 
     @Override
     public void showFailed() {
         ToastUtils.showShort(R.string.request_api_failed);
+        statusLayoutManager.showError();
     }
 
     @Override
     public void showNoNet() {
         ToastUtils.showShort(R.string.network_connect_error);
+        statusLayoutManager.showNetWorkError();
     }
 
     @Override

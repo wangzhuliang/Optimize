@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Gravity;
-import android.view.KeyEvent;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -13,6 +12,8 @@ import com.ashokvarma.bottomnavigation.ShapeBadgeItem;
 import com.ashokvarma.bottomnavigation.TextBadgeItem;
 import com.blankj.utilcode.util.BarUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.ns.yc.ycstatelib.StateLayoutManager;
+
 import java.util.ArrayList;
 import butterknife.BindView;
 import wang.cn.com.optimize.base.BaseActivity;
@@ -40,9 +41,20 @@ public class  MainActivity extends BaseActivity implements BottomNavigationBar.O
     private ArrayList<String> mTitleStrs = new ArrayList<>();
     private ArrayList<Fragment> mFragments = new ArrayList<>();
 
-    @Override
+    /*@Override
     protected int getLayoutId() {
         return R.layout.activity_main;
+    }*/
+
+    @Override
+    protected void initStatusLayout() {
+        statusLayoutManager = StateLayoutManager.newBuilder(this)
+                .contentView(R.layout.activity_main)
+                .emptyDataView(R.layout.activity_wang_emptydata)
+                .errorView(R.layout.activity_wang_error)
+                .netWorkErrorView(R.layout.activity_wang_networkerror)
+                .build();
+        //.loadingView(R.layout.activity_wang_loading)
     }
 
     @Override

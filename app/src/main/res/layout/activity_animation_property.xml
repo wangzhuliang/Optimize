@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_demo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="?attr/colorAccent"
+        android:gravity="center"
+        android:text="@string/wang"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/do_by_xml"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/do_by_xml"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/do_by_code"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/do_by_code"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/do_by_custom"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/do_by_custom"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/view_property_animator"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/view_property_animator"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/layout_animator"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/layout_animator"/>
+
+</LinearLayout>

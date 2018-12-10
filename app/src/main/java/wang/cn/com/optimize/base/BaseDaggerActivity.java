@@ -113,6 +113,7 @@ public abstract class BaseDaggerActivity<T extends BaseContract.BasePresenter>
 
     @Override
     public void onRetry() {
+
     }
 
     @Override

@@ -116,6 +116,7 @@ public class HomeFragment extends BaseDaggerFragment<HomePresenter>
             }
         });
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             homeRecyclerView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
                 @Override

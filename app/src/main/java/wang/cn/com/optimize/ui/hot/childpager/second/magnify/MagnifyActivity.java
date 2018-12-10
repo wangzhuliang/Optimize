@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.ns.yc.ycstatelib.StateLayoutManager;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -82,9 +83,20 @@ public class MagnifyActivity extends BaseActivity {
         activity.overridePendingTransition(0, 0);
     }
 
-    @Override
+    /*@Override
     protected int getLayoutId() {
         return R.layout.activity_hot_magnify;
+    }*/
+
+    @Override
+    protected void initStatusLayout() {
+        statusLayoutManager = StateLayoutManager.newBuilder(this)
+                .contentView(R.layout.activity_hot_magnify)
+                .emptyDataView(R.layout.activity_wang_emptydata)
+                .errorView(R.layout.activity_wang_error)
+                .loadingView(R.layout.activity_wang_loading)
+                .netWorkErrorView(R.layout.activity_wang_networkerror)
+                .build();
     }
 
     @Override

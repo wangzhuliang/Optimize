@@ -30,6 +30,46 @@
     <string name="range">Range</string>
     <string name="none">None</string>
     <string name="to_dingding">去钉钉日历</string>
+    <string name="animation">动画</string>
+    <string name="view_anim">View Anim == View动画</string>
+    <string name="alpha_animation">alphaAnimation</string>
+    <string name="rotate_animation">rotateAnimation</string>
+    <string name="scale_animation">scaleAnimation</string>
+    <string name="translate_animation">translateAnimation</string>
+    <string name="animation_set">animationSet</string>
+    <string name="animation_xml">animationXml</string>
+    <string name="drawable_anim">Drawable Anim</string>
+    <string name="tv_do">Do</string>
+    <string name="tv_stop">Stop</string>
+    <string name="property_anim">Property Anim == 属性动画</string>
+    <string name="wang">wang</string>
+    <string name="do_by_xml">Do By Xml</string>
+    <string name="do_by_code">Do By Code</string>
+    <string name="do_by_custom">Do By Custom</string>
+    <string name="view_property_animator">ViewPropertyAnimator 动画</string>
+    <string name="layout_animator">LayoutAnimator</string>
+    <string name="coordinator">折叠布局</string>
+    <string name="announcement">公告</string>
+    <string name="kfc">肯德基(龙漕路店)</string>
+    <string name="discounts">优惠</string>
+    <string name="introduce">感谢您对本店的支持与鼓励，我们会更用心的去做更好的美食来感谢您的支持，肯德基欢迎您再次光临！\n欢迎拨打我们的消费热线：021－300059</string>
+    <string name="price">¥6</string>
+    <string name="no_threshold">无门槛</string>
+    <string name="super_members">超级会员红包</string>
+    <string name="receive">领取</string>
+    <string name="preferential">6个优惠</string>
+    <string name="first_order">首单</string>
+    <string name="first_text">新用户下单立减20元</string>
+    <string name="promotion">促销</string>
+    <string name="second_text">来领个1元优惠卷</string>
+    <string name="member">会员</string>
+    <string name="third_text">超级会员领取6元无门槛红包</string>
+    <string name="full_reduction">满减</string>
+    <string name="forth_text">满30减4，满60减8，满120减20</string>
+    <string name="gift_consumption">满赠</string>
+    <string name="fifth_text">满150赠送大瓶雪碧一瓶</string>
+    <string name="insurance">保险</string>
+    <string name="sixth_text">该商户全部商品已由太平洋保险承保，食品安全有保障</string>
 
     <integer-array name="test_arr">
         <item>@drawable/beauty1</item>
@@ -46,4 +86,6 @@
         <item>@drawable/beauty12</item>
         <item>@drawable/beauty13</item>
     </integer-array>
+
+
 </resources>
